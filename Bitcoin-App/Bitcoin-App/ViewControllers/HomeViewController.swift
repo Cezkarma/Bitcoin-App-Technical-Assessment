@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
         
         viewModel.showFailedToGetRatesAlert = showFailedToGetRatesAlert
         //TODO: when I add the tabbar controller, does viewDidLoad trigger every time I go back to the home screen? If so, don't do this every time on load. I don't think it will though, I think viewWillAppear will be called every time and viewDidLoad only once. Still, double check.
-        viewModel.GetFluctuationRates()
+        viewModel.getFluctuationRates()
     }
     
     init() {

@@ -58,48 +58,6 @@ class NetworkService {
         task.resume()
         semaphore.wait()
     }
-    
-    func fetchCurrencyRates(baseCurrency base: String, convertedCurrencies symbols: String, completion: @escaping (Result<CurrencyRatesModel, Error>) -> Void) {
-        let semaphore = DispatchSemaphore(value: 0)
-        
-        let urlString = baseUrl+"latest?symbols=\(symbols)&base=\(base)"
-        guard let url = URL(string: urlString) else {
-            completion(.failure(NetworkError.invalidURL))
-            return
-        }
-        
-        var request = URLRequest(url: url, timeoutInterval: Double.infinity)
-        request.httpMethod = "GET"
-        request.addValue(KeychainAccess().retrieveAPIKey() ?? "", forHTTPHeaderField: "apikey")
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            defer { semaphore.signal() }
-            
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            guard let data = data else {
-                completion(.failure(NetworkError.noData))
-                return
-            }
-            
-            if let jsonString = String(data: data, encoding: .utf8) {
-                print("API Response JSON: \(jsonString)")
-            }
-            
-            do {
-                let currencyRates = try JSONDecoder().decode(CurrencyRatesModel.self, from: data)
-                completion(.success(currencyRates))
-            } catch {
-                completion(.failure(error))
-            }
-        }
-        
-        task.resume()
-        semaphore.wait()
-    }
 }
 
 enum NetworkError: Error {

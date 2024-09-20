@@ -13,7 +13,7 @@ class HomeViewModel {
     
     var currencyRates: [String: CurrencyRate]?//[(String, CurrencyRate)]
     
-    public func GetFluctuationRates() {
+    public func getFluctuationRates() {
         NetworkService.shared.fetchFluctuationRates(baseCurrency: "BTC", convertedCurrencies: getFavoriteCurrenciesListAsString()) { result in
             switch result {
             case .success(let response):
@@ -22,20 +22,6 @@ class HomeViewModel {
                 print("Rates: \(response.rates)")
             case .failure(let error):
                 (self.showFailedToGetRatesAlert ?? {})()
-                print("Error fetching currency rates: \(error)")
-            }
-        }
-    }
-    
-    public func GetConvertedCurrencies() {
-        NetworkService.shared.fetchCurrencyRates(baseCurrency: "BTC", convertedCurrencies: getFavoriteCurrenciesListAsString()) { result in
-            switch result {
-            case .success(let response):
-                print("Base currency: \(response.base)")
-                print("Date: \(response.date)")
-                print("Rates: \(response.rates)")
-                print("Timestamp: \(response.timestamp)")
-            case .failure(let error):
                 print("Error fetching currency rates: \(error)")
             }
         }

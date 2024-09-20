@@ -24,7 +24,6 @@
 		A3971A552C9DA15F00F179D6 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A542C9DA15F00F179D6 /* CurrencyTableViewCell.swift */; };
 		A3971A582C9DA96400F179D6 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A572C9DA96400F179D6 /* KeychainAccess.swift */; };
 		A3971A5B2C9DD21100F179D6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A5A2C9DD21100F179D6 /* NetworkService.swift */; };
-		A3971A5D2C9DD50F00F179D6 /* CurrencyRatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A5C2C9DD50F00F179D6 /* CurrencyRatesModel.swift */; };
 		A3971A5F2C9E1B3C00F179D6 /* Date+StringDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A5E2C9E1B3C00F179D6 /* Date+StringDates.swift */; };
 		A3971A632C9E1D0F00F179D6 /* FluctuationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A622C9E1D0F00F179D6 /* FluctuationModel.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +65,6 @@
 		A3971A542C9DA15F00F179D6 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
 		A3971A572C9DA96400F179D6 /* KeychainAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
 		A3971A5A2C9DD21100F179D6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		A3971A5C2C9DD50F00F179D6 /* CurrencyRatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRatesModel.swift; sourceTree = "<group>"; };
 		A3971A5E2C9E1B3C00F179D6 /* Date+StringDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StringDates.swift"; sourceTree = "<group>"; };
 		A3971A622C9E1D0F00F179D6 /* FluctuationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluctuationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,7 +169,6 @@
 		A3971A472C9C4CBD00F179D6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A3971A5C2C9DD50F00F179D6 /* CurrencyRatesModel.swift */,
 				A3971A622C9E1D0F00F179D6 /* FluctuationModel.swift */,
 			);
 			path = Models;
@@ -362,7 +359,6 @@
 				A3971A632C9E1D0F00F179D6 /* FluctuationModel.swift in Sources */,
 				A3971A4E2C9C571C00F179D6 /* HomeViewModel.swift in Sources */,
 				A3971A552C9DA15F00F179D6 /* CurrencyTableViewCell.swift in Sources */,
-				A3971A5D2C9DD50F00F179D6 /* CurrencyRatesModel.swift in Sources */,
 				A3971A152C9C4C1D00F179D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
