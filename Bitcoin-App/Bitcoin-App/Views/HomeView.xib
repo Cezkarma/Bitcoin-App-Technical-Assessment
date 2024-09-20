@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Bitcoin_App" customModuleProvider="target">
             <connections>
+                <outlet property="currenciesTableView" destination="yYB-34-lMw" id="cdw-vH-7MS"/>
                 <outlet property="inputAmountTextField" destination="9V8-XK-QpQ" id="17V-6a-g1i"/>
                 <outlet property="view" destination="iN0-l3-epB" id="np2-iH-acY"/>
             </connections>

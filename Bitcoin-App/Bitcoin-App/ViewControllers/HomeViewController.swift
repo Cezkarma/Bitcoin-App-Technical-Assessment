@@ -8,9 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
-    @IBOutlet weak var inputAmountTextField: UITextField!
     
+    @IBOutlet weak var inputAmountTextField: UITextField!
+    @IBOutlet weak var currenciesTableView: UITableView!
     
     private let viewModel: HomeViewModel
     
@@ -21,8 +21,8 @@ class HomeViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         //
-        
-        
+        currenciesTableView.register(UINib(nibName: "CurrencyTableViewCell", bundle: nil), forCellReuseIdentifier: "CurrencyTableViewCell")
+        currenciesTableView.dataSource = self
     }
     
     init() {
@@ -39,6 +39,7 @@ class HomeViewController: UIViewController {
         if let bitcoinAmount = Double(inputAmountTextField.text ?? "") {
             KeychainAccess.shared.storeBitcoinAmount(bitcoinAmount)
             print(KeychainAccess.shared.retrieveBitcoinAmount() ?? 0.0)
+            currenciesTableView.reloadData()
         } else {
             showInvalidAmountAlert()
             return
@@ -63,3 +64,17 @@ class HomeViewController: UIViewController {
     }
 }
 
+//Adding the UITableView related conformance here for clean coding purposes.
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = currenciesTableView.dequeueReusableCell(withIdentifier: "CurrencyTableViewCell", for: indexPath) as! CurrencyTableViewCell
+        cell.currencyCodeLabel.text = "BTC"
+        cell.amountLabel.text = String(KeychainAccess.shared.retrieveBitcoinAmount() ?? 0.0)
+        
+        return cell
+    }
+}
