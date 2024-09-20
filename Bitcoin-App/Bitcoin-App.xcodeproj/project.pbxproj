@@ -26,6 +26,7 @@
 		A3971A5B2C9DD21100F179D6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A5A2C9DD21100F179D6 /* NetworkService.swift */; };
 		A3971A5F2C9E1B3C00F179D6 /* Date+StringDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A5E2C9E1B3C00F179D6 /* Date+StringDates.swift */; };
 		A3971A632C9E1D0F00F179D6 /* FluctuationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A622C9E1D0F00F179D6 /* FluctuationModel.swift */; };
+		A3971A652C9E299A00F179D6 /* ImageFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A642C9E299A00F179D6 /* ImageFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		A3971A5A2C9DD21100F179D6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A3971A5E2C9E1B3C00F179D6 /* Date+StringDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+StringDates.swift"; sourceTree = "<group>"; };
 		A3971A622C9E1D0F00F179D6 /* FluctuationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluctuationModel.swift; sourceTree = "<group>"; };
+		A3971A642C9E299A00F179D6 /* ImageFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			children = (
 				A3971A572C9DA96400F179D6 /* KeychainAccess.swift */,
 				A3971A5A2C9DD21100F179D6 /* NetworkService.swift */,
+				A3971A642C9E299A00F179D6 /* ImageFactory.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				A3971A5F2C9E1B3C00F179D6 /* Date+StringDates.swift in Sources */,
 				A3971A5B2C9DD21100F179D6 /* NetworkService.swift in Sources */,
 				A3971A132C9C4C1D00F179D6 /* AppDelegate.swift in Sources */,
+				A3971A652C9E299A00F179D6 /* ImageFactory.swift in Sources */,
 				A3971A582C9DA96400F179D6 /* KeychainAccess.swift in Sources */,
 				A3971A632C9E1D0F00F179D6 /* FluctuationModel.swift in Sources */,
 				A3971A4E2C9C571C00F179D6 /* HomeViewModel.swift in Sources */,

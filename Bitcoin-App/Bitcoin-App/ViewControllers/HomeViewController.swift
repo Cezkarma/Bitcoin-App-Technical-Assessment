@@ -99,13 +99,13 @@ extension HomeViewController: UITableViewDataSource {
             cell.amountLabel.text = String(currencyAmount)
             cell.growthImageView?.isHidden = (currencyAmount == 0.0)
             if change < 0.0 {
-                cell.growthImageView.image = UIImage(systemName: "chart.line.downtrend.xyaxis")
+                cell.growthImageView.image = ImageFactory.downtrendImage
                 cell.growthImageView.tintColor = .blue
             } else if change > 0.0 {
-                cell.growthImageView.image = UIImage(systemName: "chart.line.uptrend.xyaxis")
+                cell.growthImageView.image = ImageFactory.uptrendImage
                 cell.growthImageView.tintColor = .bitcoinOrange
             } else {
-                cell.growthImageView.image = UIImage(systemName: "chart.line.flattrend.xyaxis")
+                cell.growthImageView.image = ImageFactory.flattrendImage
                 cell.growthImageView.tintColor = .lightGray
             }
         }
