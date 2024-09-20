@@ -19,6 +19,10 @@
 		A3971A4C2C9C4FDA00F179D6 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3971A4B2C9C4FDA00F179D6 /* HomeView.xib */; };
 		A3971A4E2C9C571C00F179D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A4D2C9C571C00F179D6 /* HomeViewModel.swift */; };
 		A3971A4F2C9C571C00F179D6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A4D2C9C571C00F179D6 /* HomeViewModel.swift */; };
+		A3971A522C9C7B1200F179D6 /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3971A512C9C7B1200F179D6 /* CurrencyTableViewCell.xib */; };
+		A3971A532C9C7B1200F179D6 /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3971A512C9C7B1200F179D6 /* CurrencyTableViewCell.xib */; };
+		A3971A552C9DA15F00F179D6 /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A542C9DA15F00F179D6 /* CurrencyTableViewCell.swift */; };
+		A3971A582C9DA96400F179D6 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A572C9DA96400F179D6 /* KeychainAccess.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,9 @@
 		A3971A382C9C4C1F00F179D6 /* Bitcoin_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitcoin_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A3971A4B2C9C4FDA00F179D6 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		A3971A4D2C9C571C00F179D6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A3971A512C9C7B1200F179D6 /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
+		A3971A542C9DA15F00F179D6 /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		A3971A572C9DA96400F179D6 /* KeychainAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAccess.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +111,8 @@
 		A3971A112C9C4C1D00F179D6 /* Bitcoin-App */ = {
 			isa = PBXGroup;
 			children = (
+				A3971A562C9DA92B00F179D6 /* Utility */,
+				A3971A502C9C7AF900F179D6 /* Cells */,
 				A3971A482C9C4D7200F179D6 /* Views */,
 				A3971A472C9C4CBD00F179D6 /* Models */,
 				A3971A462C9C4CB500F179D6 /* ViewModels */,
@@ -164,6 +173,23 @@
 				A3971A4B2C9C4FDA00F179D6 /* HomeView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A3971A502C9C7AF900F179D6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A3971A512C9C7B1200F179D6 /* CurrencyTableViewCell.xib */,
+				A3971A542C9DA15F00F179D6 /* CurrencyTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A3971A562C9DA92B00F179D6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A3971A572C9DA96400F179D6 /* KeychainAccess.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3971A522C9C7B1200F179D6 /* CurrencyTableViewCell.xib in Resources */,
 				A3971A222C9C4C1F00F179D6 /* LaunchScreen.storyboard in Resources */,
 				A3971A4C2C9C4FDA00F179D6 /* HomeView.xib in Resources */,
 				A3971A1F2C9C4C1F00F179D6 /* Assets.xcassets in Resources */,
@@ -280,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3971A532C9C7B1200F179D6 /* CurrencyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +328,9 @@
 				A3971A1D2C9C4C1D00F179D6 /* Bitcoin_App.xcdatamodeld in Sources */,
 				A3971A172C9C4C1D00F179D6 /* HomeViewController.swift in Sources */,
 				A3971A132C9C4C1D00F179D6 /* AppDelegate.swift in Sources */,
+				A3971A582C9DA96400F179D6 /* KeychainAccess.swift in Sources */,
 				A3971A4E2C9C571C00F179D6 /* HomeViewModel.swift in Sources */,
+				A3971A552C9DA15F00F179D6 /* CurrencyTableViewCell.swift in Sources */,
 				A3971A152C9C4C1D00F179D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

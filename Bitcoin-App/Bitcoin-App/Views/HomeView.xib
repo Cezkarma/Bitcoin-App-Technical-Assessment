@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Bitcoin_App" customModuleProvider="target">
             <connections>
+                <outlet property="inputAmountTextField" destination="9V8-XK-QpQ" id="17V-6a-g1i"/>
                 <outlet property="view" destination="iN0-l3-epB" id="np2-iH-acY"/>
             </connections>
         </placeholder>
@@ -18,12 +20,93 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BitcoinLogo" translatesAutoresizingMaskIntoConstraints="NO" id="3cJ-k6-QoF">
+                    <rect key="frame" x="132.66666666666666" y="89" width="127.99999999999997" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="128" id="4Ew-qL-x1o"/>
+                        <constraint firstAttribute="height" constant="128" id="Mv8-Ly-kYH"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the amount of Bitcoin you own below!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ki-PI-2NK" userLabel="EnterBitcoinLabel">
+                    <rect key="frame" x="66.666666666666686" y="227" width="260" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="xiD-Ys-TA5"/>
+                        <constraint firstAttribute="width" constant="260" id="zJy-0U-l5m"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="amount" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9V8-XK-QpQ" userLabel="InputAmountTextField">
+                    <rect key="frame" x="126.66666666666669" y="311" width="140" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="KZy-Ai-5ng"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QJ-l6-cR2" userLabel="UpdateButton">
+                    <rect key="frame" x="154" y="360" width="85" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="3ku-e0-v6e"/>
+                        <constraint firstAttribute="height" constant="34" id="gHM-3R-0m9"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Update">
+                        <fontDescription key="titleFontDescription" type="system" weight="black" pointSize="16"/>
+                        <color key="baseBackgroundColor" name="BitcoinOrange"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="updateButtonClicked:" destination="-1" eventType="touchUpInside" id="MNb-4f-6GI"/>
+                    </connections>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oDH-ZZ-l1C">
+                    <rect key="frame" x="10" y="414" width="373" height="394"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yYB-34-lMw" userLabel="CurrenciesTableView">
+                            <rect key="frame" x="8" y="8" width="355" height="378"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="355" id="quz-N0-dtJ"/>
+                            </constraints>
+                        </tableView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="yYB-34-lMw" firstAttribute="bottom" secondItem="oDH-ZZ-l1C" secondAttribute="bottomMargin" id="50L-ra-2X1"/>
+                        <constraint firstItem="yYB-34-lMw" firstAttribute="trailing" secondItem="oDH-ZZ-l1C" secondAttribute="trailingMargin" id="5yi-NH-g0W"/>
+                        <constraint firstItem="yYB-34-lMw" firstAttribute="leading" secondItem="oDH-ZZ-l1C" secondAttribute="leadingMargin" id="F8u-Eg-wLe"/>
+                        <constraint firstItem="yYB-34-lMw" firstAttribute="top" secondItem="oDH-ZZ-l1C" secondAttribute="topMargin" id="qjF-oc-N7W"/>
+                        <constraint firstItem="yYB-34-lMw" firstAttribute="centerY" secondItem="oDH-ZZ-l1C" secondAttribute="centerY" id="tiX-c5-RaT"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="2n0-Ps-sV5"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Z0K-ta-fim"/>
+                </scrollView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="0QJ-l6-cR2" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="4gI-Qn-mWl"/>
+                <constraint firstItem="3cJ-k6-QoF" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="8ld-9Y-0gr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oDH-ZZ-l1C" secondAttribute="trailing" constant="10" id="D9w-j9-6zD"/>
+                <constraint firstItem="5Ki-PI-2NK" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Ncx-Rn-byn"/>
+                <constraint firstItem="5Ki-PI-2NK" firstAttribute="top" secondItem="3cJ-k6-QoF" secondAttribute="bottom" constant="10" id="O9u-CN-coy"/>
+                <constraint firstItem="oDH-ZZ-l1C" firstAttribute="top" secondItem="0QJ-l6-cR2" secondAttribute="bottom" constant="20" id="Pgo-Pa-kxs"/>
+                <constraint firstItem="9V8-XK-QpQ" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="YNh-AX-aoI"/>
+                <constraint firstItem="3cJ-k6-QoF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="hhM-1g-dV6"/>
+                <constraint firstItem="9V8-XK-QpQ" firstAttribute="top" secondItem="5Ki-PI-2NK" secondAttribute="bottom" constant="20" id="iup-ie-GBy"/>
+                <constraint firstItem="oDH-ZZ-l1C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="jwg-iL-17M"/>
+                <constraint firstItem="0QJ-l6-cR2" firstAttribute="top" secondItem="9V8-XK-QpQ" secondAttribute="bottom" constant="15" id="nsN-sb-qnL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oDH-ZZ-l1C" secondAttribute="bottom" constant="10" id="vdZ-nc-aPI"/>
+            </constraints>
             <point key="canvasLocation" x="-89.312977099236633" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="BitcoinLogo" width="1200" height="1200"/>
+        <namedColor name="BitcoinOrange">
+            <color red="0.96862745098039216" green="0.58039215686274515" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
