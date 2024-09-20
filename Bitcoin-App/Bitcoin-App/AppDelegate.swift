@@ -15,6 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //This line ensures that the API Key is stored for API requests and checks default currencies
+        KeychainAccess.shared.checkDefaults()
+        
         return true
     }
 
