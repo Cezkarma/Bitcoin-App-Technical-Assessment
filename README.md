@@ -11,7 +11,7 @@ Please watch the video titled "BitcoinAppShowcase.mov" to see the breakdown of m
 
 After watching that, please watch "WatchAfterMainVideo.mov" where I correct a mistake with the test cases from the first video.
 
-In both cases, please excuse my rambling, I'm so not a public speaker LOL.
+In both cases, please excuse my rambling, I'm sooo not a public speaker LOL.
 
 
 I believe that my solution to this assessment showcases the following:
