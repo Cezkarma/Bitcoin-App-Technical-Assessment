@@ -13,7 +13,7 @@ class KeychainAccess {
     private let apiKeyKey = "com.bitcoinApp.apiKey"
     private let favoriteCurrenciesKey = "com.bitcoinApp.favoriteCurrenciesKey"
     
-    static let shared = KeychainAccess()
+    static var shared = KeychainAccess() //Made this a var so that the unit tests can set it to the mocks
     
     func checkDefaults() {
         ensureAPIKeyStored()

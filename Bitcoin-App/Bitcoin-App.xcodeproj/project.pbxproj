@@ -13,7 +13,6 @@
 		A3971A1D2C9C4C1D00F179D6 /* Bitcoin_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3971A1B2C9C4C1D00F179D6 /* Bitcoin_App.xcdatamodeld */; };
 		A3971A1F2C9C4C1F00F179D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3971A1E2C9C4C1F00F179D6 /* Assets.xcassets */; };
 		A3971A222C9C4C1F00F179D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3971A202C9C4C1F00F179D6 /* LaunchScreen.storyboard */; };
-		A3971A2D2C9C4C1F00F179D6 /* Bitcoin_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A2C2C9C4C1F00F179D6 /* Bitcoin_AppTests.swift */; };
 		A3971A372C9C4C1F00F179D6 /* Bitcoin_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A362C9C4C1F00F179D6 /* Bitcoin_AppUITests.swift */; };
 		A3971A392C9C4C1F00F179D6 /* Bitcoin_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A382C9C4C1F00F179D6 /* Bitcoin_AppUITestsLaunchTests.swift */; };
 		A3971A4C2C9C4FDA00F179D6 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3971A4B2C9C4FDA00F179D6 /* HomeView.xib */; };
@@ -33,6 +32,14 @@
 		A3971A712C9EF11D00F179D6 /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3971A702C9EF11D00F179D6 /* FavoritesTableViewCell.xib */; };
 		A3971A732C9EFADC00F179D6 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A722C9EFADC00F179D6 /* FavoritesTableViewCell.swift */; };
 		A3971A752C9F64C500F179D6 /* CurrencySymbolsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A742C9F64C500F179D6 /* CurrencySymbolsModel.swift */; };
+		A3971A772CA0349000F179D6 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A762CA0349000F179D6 /* HomeViewModelTests.swift */; };
+		A3971A782CA03C1100F179D6 /* FluctuationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A622C9E1D0F00F179D6 /* FluctuationModel.swift */; };
+		A3971A792CA03C9500F179D6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A5A2C9DD21100F179D6 /* NetworkService.swift */; };
+		A3971A7A2CA03CC700F179D6 /* KeychainAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A572C9DA96400F179D6 /* KeychainAccess.swift */; };
+		A3971A7B2CA03CFF00F179D6 /* CurrencySymbolsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A742C9F64C500F179D6 /* CurrencySymbolsModel.swift */; };
+		A3971A7E2CA03D2700F179D6 /* Date+StringDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A5E2C9E1B3C00F179D6 /* Date+StringDates.swift */; };
+		A3971A802CA03D3B00F179D6 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A6C2C9EE39500F179D6 /* FavoritesViewModel.swift */; };
+		A3971A842CA03F9F00F179D6 /* FavoritesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3971A832CA03F9F00F179D6 /* FavoritesViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +69,6 @@
 		A3971A212C9C4C1F00F179D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3971A232C9C4C1F00F179D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3971A282C9C4C1F00F179D6 /* Bitcoin-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bitcoin-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3971A2C2C9C4C1F00F179D6 /* Bitcoin_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitcoin_AppTests.swift; sourceTree = "<group>"; };
 		A3971A322C9C4C1F00F179D6 /* Bitcoin-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bitcoin-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3971A362C9C4C1F00F179D6 /* Bitcoin_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitcoin_AppUITests.swift; sourceTree = "<group>"; };
 		A3971A382C9C4C1F00F179D6 /* Bitcoin_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bitcoin_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -82,6 +88,8 @@
 		A3971A702C9EF11D00F179D6 /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		A3971A722C9EFADC00F179D6 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		A3971A742C9F64C500F179D6 /* CurrencySymbolsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySymbolsModel.swift; sourceTree = "<group>"; };
+		A3971A762CA0349000F179D6 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		A3971A832CA03F9F00F179D6 /* FavoritesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +159,8 @@
 		A3971A2B2C9C4C1F00F179D6 /* Bitcoin-AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				A3971A2C2C9C4C1F00F179D6 /* Bitcoin_AppTests.swift */,
+				A3971A762CA0349000F179D6 /* HomeViewModelTests.swift */,
+				A3971A832CA03F9F00F179D6 /* FavoritesViewModelTests.swift */,
 			);
 			path = "Bitcoin-AppTests";
 			sourceTree = "<group>";
@@ -397,8 +406,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3971A2D2C9C4C1F00F179D6 /* Bitcoin_AppTests.swift in Sources */,
+				A3971A842CA03F9F00F179D6 /* FavoritesViewModelTests.swift in Sources */,
+				A3971A792CA03C9500F179D6 /* NetworkService.swift in Sources */,
+				A3971A7A2CA03CC700F179D6 /* KeychainAccess.swift in Sources */,
+				A3971A7E2CA03D2700F179D6 /* Date+StringDates.swift in Sources */,
+				A3971A802CA03D3B00F179D6 /* FavoritesViewModel.swift in Sources */,
+				A3971A782CA03C1100F179D6 /* FluctuationModel.swift in Sources */,
+				A3971A7B2CA03CFF00F179D6 /* CurrencySymbolsModel.swift in Sources */,
 				A3971A4F2C9C571C00F179D6 /* HomeViewModel.swift in Sources */,
+				A3971A772CA0349000F179D6 /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

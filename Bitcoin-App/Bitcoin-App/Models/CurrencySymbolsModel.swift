@@ -10,4 +10,9 @@ import Foundation
 struct CurrencySymbolsModel: Codable {
     let success: Bool
     let symbols: [String: String]
+    
+    init(success: Bool, symbols: [String : String]) {
+        self.success = success
+        self.symbols = symbols
+    }
 }

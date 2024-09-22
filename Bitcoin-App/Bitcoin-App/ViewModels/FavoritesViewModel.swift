@@ -24,10 +24,11 @@ class FavoritesViewModel {
                 }
                 self.symbols.sort()
             case .failure(let error):
-                (self.showFailedToGetSymbolsAlert ?? {})()
+                DispatchQueue.main.async {
+                    (self.showFailedToGetSymbolsAlert ?? {})()
+                }
                 print("Error fetching currency rates: \(error)")
             }
         }
     }
-    
 }

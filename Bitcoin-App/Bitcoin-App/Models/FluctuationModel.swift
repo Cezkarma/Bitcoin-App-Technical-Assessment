@@ -37,4 +37,11 @@ struct CurrencyRate: Codable {
         case endRate = "end_rate"
         case startRate = "start_rate"
     }
+    
+    public init(change: Double, changePct: Double, endRate: Double, startRate: Double) {
+        self.change = change
+        self.changePct = changePct
+        self.endRate = endRate
+        self.startRate = startRate
+    }
 }

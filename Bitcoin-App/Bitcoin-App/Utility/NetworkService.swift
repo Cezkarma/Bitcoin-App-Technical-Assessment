@@ -9,11 +9,11 @@ import Foundation
 
 class NetworkService {
     
-    static let shared = NetworkService()
+    static var shared = NetworkService() //Made this a var so that the unit tests can set it to the mocks
     
     private let baseUrl = "https://api.apilayer.com/fixer/"
     
-    private init() {}
+    init() {}
     
     func fetchFluctuationRates(baseCurrency base: String, convertedCurrencies symbols: String, completion: @escaping (Result<FluctuationModel, Error>) -> Void) {
         let semaphore = DispatchSemaphore(value: 0)
