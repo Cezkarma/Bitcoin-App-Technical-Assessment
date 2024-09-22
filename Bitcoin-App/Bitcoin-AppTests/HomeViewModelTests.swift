@@ -53,8 +53,10 @@ final class HomeViewModelTests: XCTestCase {
         
         viewModel.getFluctuationRates()
         
-        XCTAssertTrue(alertTriggered)
-        XCTAssertNil(viewModel.currencyRates)
+        DispatchQueue.main.async {
+            XCTAssertTrue(alertTriggered)
+        }
+        XCTAssertNil(self.viewModel.currencyRates)
     }
     
     // Test favorite currencies changed

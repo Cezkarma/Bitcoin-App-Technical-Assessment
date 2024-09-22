@@ -51,8 +51,10 @@ final class FavoritesViewModelTests: XCTestCase {
         
         viewModel.getCurrencySymbols()
         
-        XCTAssertTrue(alertTriggered)
-        XCTAssertTrue(viewModel.symbols.isEmpty) // Symbols should not be updated on failure
+        DispatchQueue.main.async {
+            XCTAssertTrue(alertTriggered)
+        }
+        XCTAssertTrue(self.viewModel.symbols.isEmpty) // Symbols should not be updated on failure
     }
     
 }
