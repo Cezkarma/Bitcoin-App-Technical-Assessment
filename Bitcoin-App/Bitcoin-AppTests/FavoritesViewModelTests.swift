@@ -26,7 +26,7 @@ final class FavoritesViewModelTests: XCTestCase {
         super.tearDown()
     }
     
-    //Test fetching currency symbols successfully
+    // Test fetching currency symbols successfully
     func testGetCurrencySymbolsSuccess() {
         let expectedSymbols = CurrencySymbolsModel(success: true, symbols: ["EUR":"Euro","USD":"US Dollar"])
         mockNetworkService.result = .success(expectedSymbols)
@@ -40,7 +40,7 @@ final class FavoritesViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.symbols, ["EUR", "USD"]) //Check if sorted
     }
     
-    //Test fetching currency symbols failure
+    // Test fetching currency symbols failure
     func testGetCurrencySymbolsFailure() {
         mockNetworkService.result = .failure(NetworkError.noData)
         
@@ -52,7 +52,7 @@ final class FavoritesViewModelTests: XCTestCase {
         viewModel.getCurrencySymbols()
         
         XCTAssertTrue(alertTriggered)
-        XCTAssertTrue(viewModel.symbols.isEmpty) //Symbols should not be updated on failure
+        XCTAssertTrue(viewModel.symbols.isEmpty) // Symbols should not be updated on failure
     }
     
 }

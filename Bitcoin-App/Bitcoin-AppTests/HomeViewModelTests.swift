@@ -30,7 +30,7 @@ final class HomeViewModelTests: XCTestCase {
         super.tearDown()
     }
 
-    //Test fetching currency rates successfully
+    // Test fetching currency rates successfully
     func testGetFluctuationRatesSuccess() {
         let currencyRate = CurrencyRate(change: -1.0, changePct: -0.1, endRate: 5.0, startRate: 5.1)
         let expectedRates = ["USD": currencyRate]
@@ -42,7 +42,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.currencyRates?["USD"]?.endRate, 5.0)
     }
     
-    //Test fetching currency rates failure
+    // Test fetching currency rates failure
     func testGetFluctuationRatesFailure() {
         mockNetworkService.result = .failure(NetworkError.noData)
         
@@ -57,7 +57,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertNil(viewModel.currencyRates)
     }
     
-    //Test favorite currencies changed
+    // Test favorite currencies changed
     func testDidFavoriteCurrenciesChangeTrue() {
         let currencyRate = CurrencyRate(change: -1.0, changePct: -0.1, endRate: 5.0, startRate: 5.1)
         let expectedRates = ["USD": currencyRate]
@@ -69,7 +69,7 @@ final class HomeViewModelTests: XCTestCase {
         XCTAssertTrue(didChange)
     }
     
-    //Test favorite currencies not changed
+    // Test favorite currencies not changed
     func testDidFavoriteCurrenciesChangeFalse() {
         let currencyRate = CurrencyRate(change: -1.0, changePct: -0.1, endRate: 5.0, startRate: 5.1)
         let expectedRates = ["USD": currencyRate]

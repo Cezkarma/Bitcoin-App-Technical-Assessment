@@ -7,6 +7,11 @@
 
 import Foundation
 
+/// A model representing the fluctuation rates of different currencies based on a base currency.
+///
+/// This struct conforms to the `Codable` protocol and is used to parse and encode
+/// fluctuation rate data received from the API. It contains information about the
+/// base currency, date range, and fluctuation rates of other currencies against the base currency.
 struct FluctuationModel: Codable {
     let base: String
     let endDate: String
@@ -25,6 +30,11 @@ struct FluctuationModel: Codable {
     }
 }
 
+/// A model representing the rate changes for a specific currency.
+///
+/// This struct conforms to the `Codable` protocol and is used to parse and encode
+/// currency rate change data. It includes information about the change amount,
+/// percentage change, and the starting and ending rates.
 struct CurrencyRate: Codable {
     let change: Double
     let changePct: Double
@@ -38,6 +48,13 @@ struct CurrencyRate: Codable {
         case startRate = "start_rate"
     }
     
+    /// Initializes a new `CurrencyRate` instance with the specified values.
+    ///
+    /// - Parameters:
+    ///   - change: The absolute change in the currency rate.
+    ///   - changePct: The percentage change in the currency rate.
+    ///   - endRate: The ending rate of the currency.
+    ///   - startRate: The starting rate of the currency.
     public init(change: Double, changePct: Double, endRate: Double, startRate: Double) {
         self.change = change
         self.changePct = changePct

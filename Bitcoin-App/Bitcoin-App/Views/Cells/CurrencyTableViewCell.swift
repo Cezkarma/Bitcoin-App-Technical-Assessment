@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
+/// A custom table view cell for displaying currency information.
 class CurrencyTableViewCell: UITableViewCell {
     @IBOutlet weak var currencyCodeLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var growthImageView: UIImageView!
-    
 }
