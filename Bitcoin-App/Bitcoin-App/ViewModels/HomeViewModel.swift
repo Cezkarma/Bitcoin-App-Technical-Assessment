@@ -13,7 +13,7 @@ class HomeViewModel {
     
     var currencyRates: [String: CurrencyRate]?//[(String, CurrencyRate)]
     
-    public func getFluctuationRates() {
+    func getFluctuationRates() {
         NetworkService.shared.fetchFluctuationRates(baseCurrency: "BTC", convertedCurrencies: getFavoriteCurrenciesListAsString()) { result in
             switch result {
             case .success(let response):
@@ -29,6 +29,21 @@ class HomeViewModel {
     
     private func getFavoriteCurrenciesListAsString() -> String {
         return KeychainAccess.shared.retrieveFavoriteCurrencies().joined(separator: ",")
+    }
+    
+    func didFavoriteCurrenciesChange() -> Bool {
+        let favoriteCurrencies = KeychainAccess.shared.retrieveFavoriteCurrencies()
+        
+        if currencyRates?.count != favoriteCurrencies.count { return true }
+        
+        guard let currencies = currencyRates?.keys else { return true }
+        for currency in currencies {
+            if favoriteCurrencies.contains(currency) == false {
+                return true
+            }
+        }
+        
+        return false
     }
     
 }

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesViewController" customModule="Bitcoin_App" customModuleProvider="target">
+            <connections>
+                <outlet property="favoritesTableView" destination="d8O-m3-veY" id="cHf-4m-WcZ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="LHG-rg-p2y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lw4-BG-VYU">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d8O-m3-veY" userLabel="FavoritesTableView">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="d8O-m3-veY" firstAttribute="centerY" secondItem="lw4-BG-VYU" secondAttribute="centerY" id="CnF-H1-hDK"/>
+                        <constraint firstItem="d8O-m3-veY" firstAttribute="top" secondItem="lw4-BG-VYU" secondAttribute="top" id="FiH-fQ-3eB"/>
+                        <constraint firstAttribute="trailing" secondItem="d8O-m3-veY" secondAttribute="trailing" id="FxD-rL-wxZ"/>
+                        <constraint firstItem="d8O-m3-veY" firstAttribute="leading" secondItem="lw4-BG-VYU" secondAttribute="leading" id="VXe-Qb-v2q"/>
+                        <constraint firstAttribute="bottom" secondItem="d8O-m3-veY" secondAttribute="bottom" id="j9X-tf-VSa"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="sf1-CB-AWc"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="bzm-io-rFa"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lw4-BG-VYU" secondAttribute="trailing" id="AEy-HY-Rzf"/>
+                <constraint firstItem="lw4-BG-VYU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Cjn-RF-VfD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lw4-BG-VYU" secondAttribute="bottom" id="Ttn-TV-Ajt"/>
+                <constraint firstItem="lw4-BG-VYU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="feR-4c-7SB"/>
+                <constraint firstItem="d8O-m3-veY" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="yFJ-c8-db0"/>
+            </constraints>
+            <point key="canvasLocation" x="-83.206106870229007" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

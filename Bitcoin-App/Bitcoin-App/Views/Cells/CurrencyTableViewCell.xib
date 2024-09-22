@@ -19,17 +19,23 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYM-7D-RIJ" userLabel="CurrencyCodeLabel">
                         <rect key="frame" x="40" y="22" width="37.666666666666657" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="34i-Wu-k2e"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VE9-zn-R9e" userLabel="AmountLabel">
                         <rect key="frame" x="97.666666666666671" y="22" width="44.666666666666671" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="8CP-5e-rxt"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart.line.flattrend.xyaxis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nzm-lc-d6Q" userLabel="GrowthImageView">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart.line.uptrend.xyaxis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nzm-lc-d6Q" userLabel="GrowthImageView">
                         <rect key="frame" x="341" y="12.999999999999996" width="42" height="39.333333333333343"/>
                         <color key="tintColor" name="BitcoinOrange"/>
                         <constraints>
@@ -56,7 +62,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="chart.line.flattrend.xyaxis" catalog="system" width="128" height="102"/>
+        <image name="chart.line.uptrend.xyaxis" catalog="system" width="128" height="102"/>
         <namedColor name="BitcoinOrange">
             <color red="0.96862745098039216" green="0.58039215686274515" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

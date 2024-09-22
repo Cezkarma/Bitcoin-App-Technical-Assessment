@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoritesTableViewCell" id="Czu-cb-rA2" customClass="FavoritesTableViewCell" customModule="Bitcoin_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Czu-cb-rA2" id="2gw-SR-wfu">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XYZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcu-uE-UIT" userLabel="CurrencyCodeLabel">
+                        <rect key="frame" x="19.999999999999996" y="10" width="39.666666666666657" height="24"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGg-mB-Jrg" userLabel="FavoriteButton">
+                        <rect key="frame" x="345" y="8.6666666666666661" width="28" height="26.666666666666671"/>
+                        <color key="tintColor" name="BitcoinOrange"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal">
+                            <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
+                        </state>
+                        <state key="selected">
+                            <imageReference key="image" image="star.fill" catalog="system" symbolScale="large"/>
+                        </state>
+                        <connections>
+                            <action selector="favoriteButtonClicked:" destination="Czu-cb-rA2" eventType="touchUpInside" id="nvl-eE-RIC"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Dcu-uE-UIT" firstAttribute="centerY" secondItem="2gw-SR-wfu" secondAttribute="centerY" id="4mY-Xg-TOQ"/>
+                    <constraint firstItem="Dcu-uE-UIT" firstAttribute="leading" secondItem="2gw-SR-wfu" secondAttribute="leading" constant="20" symbolic="YES" id="DX4-BO-qwX"/>
+                    <constraint firstAttribute="trailing" secondItem="dGg-mB-Jrg" secondAttribute="trailing" constant="20" id="W35-lf-gNi"/>
+                    <constraint firstItem="dGg-mB-Jrg" firstAttribute="centerY" secondItem="2gw-SR-wfu" secondAttribute="centerY" id="XV2-Be-b9D"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="currencyCodeLabel" destination="Dcu-uE-UIT" id="z7a-Wk-KqY"/>
+                <outlet property="favoriteButton" destination="dGg-mB-Jrg" id="0ub-e2-Rjo"/>
+            </connections>
+            <point key="canvasLocation" x="-625.19083969465646" y="27.464788732394368"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="BitcoinOrange">
+            <color red="0.96862745098039216" green="0.58039215686274515" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

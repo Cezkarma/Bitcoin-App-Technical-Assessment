@@ -22,6 +22,7 @@ class KeychainAccess {
         //Doing it like this to avoid using false checks with '!' for clean coding principles
         if UserDefaults.standard.bool(forKey: "initialLoadDone") { return }
         
+        //if this is the initial load, store the default currencies
         storeFavoriteCurrencies(["ZAR", "USD", "AUD"])
         UserDefaults.standard.set(true, forKey: "initialLoadDone")
     }

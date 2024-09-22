@@ -21,12 +21,23 @@ class HomeViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         //
+        
+        currenciesTableView.rowHeight = UITableView.automaticDimension
+        currenciesTableView.estimatedRowHeight = 65.0
         currenciesTableView.register(UINib(nibName: "CurrencyTableViewCell", bundle: nil), forCellReuseIdentifier: "CurrencyTableViewCell")
         currenciesTableView.dataSource = self
         
-        viewModel.showFailedToGetRatesAlert = showFailedToGetRatesAlert
-        //TODO: when I add the tabbar controller, does viewDidLoad trigger every time I go back to the home screen? If so, don't do this every time on load. I don't think it will though, I think viewWillAppear will be called every time and viewDidLoad only once. Still, double check.
+        viewModel.showFailedToGetRatesAlert = showFailedToGetRatesAlert //Sending function as a closure to viewModel
         viewModel.getFluctuationRates()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if viewModel.didFavoriteCurrenciesChange() {
+            viewModel.getFluctuationRates()
+            currenciesTableView.reloadData()
+        }
     }
     
     init() {
@@ -41,9 +52,15 @@ class HomeViewController: UIViewController {
     
     @IBAction func updateButtonClicked(_ sender: Any) {
         if let bitcoinAmount = Double(inputAmountTextField.text ?? "") {
-            KeychainAccess.shared.storeBitcoinAmount(bitcoinAmount)
-            print(KeychainAccess.shared.retrieveBitcoinAmount() ?? 0.0)
-            currenciesTableView.reloadData()
+            if bitcoinAmount < 0.0 {
+                showInvalidAmountAlert()
+            } else {
+                KeychainAccess.shared.storeBitcoinAmount(bitcoinAmount)
+                print(KeychainAccess.shared.retrieveBitcoinAmount() ?? 0.0)
+                inputAmountTextField.text = ""
+                dismissKeyboard()
+                currenciesTableView.reloadData()
+            }
         } else {
             showInvalidAmountAlert()
             return
@@ -51,7 +68,7 @@ class HomeViewController: UIViewController {
     }
     
     private func showInvalidAmountAlert() {
-        showProblemAlert(title: "Invalid input", message: "Please make sure that you input a valid decimal amount.")
+        showProblemAlert(title: "Invalid input", message: "Please make sure that you input a valid, positive decimal amount.")
     }
     
     private func showFailedToGetRatesAlert() {
